@@ -1,0 +1,32 @@
+spring:
+    application:
+        name: proyecto
+
+    datasource:
+        driver-class-name: org.postgresql.Driver
+        username: postgres
+        password: 1234
+        url: jdbc:postgresql://localhost:5432/postgres
+    jpa:
+        show-sql: true
+        generate-ddl: true
+        hibernate:
+            ddl-auto: update
+        database: postgresql
+
+springdoc:
+    api-docs:
+        path: /v3/api-docs
+    swagger-ui:
+        path: /swagger-ui.html
+        operations-sorter: method
+        tags-sorter: alpha
+        display-request-duration: true
+
+logging:
+    file:
+        name: logs/proyecto.log
+    level:
+        root: INFO
+        com.banbajio: DEBUG
+        org.hibernate.SQL: DEBUG
